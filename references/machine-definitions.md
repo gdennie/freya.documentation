@@ -8,7 +8,7 @@ Other functions return a value specific to that operation, and are detailed in t
 
 ## Actions
 
-All action operations are of type `Freya<unit>` (aliased as `FreyaMachineAction` in the Freya.Machine codebase). By default all actions will be a simple no-op (a safe default).
+Action operations are of type `Freya<unit>` (aliased as `FreyaMachineAction` in the Freya.Machine codebase). By default all actions will be a simple no-op (a safe default).
 
 Operation | Description
 ----------|------------
@@ -19,7 +19,7 @@ doPut     | Fill In
 
 ## Configuration
 
-Configuration operation types vary by required return type, so the types are given in the table. They are all of Freya<T>, where T is configuration operation specific.
+Configuration operation types vary by required return type, so the types are given in the table. They are all of Freya<T>, where T is configuration operation specific. Default values returned (the `T` from `Freya<T>`) are given.
 
 Operation            | Type                                   | Default | Description
 ---------------------|----------------------------------------|---------|------------
@@ -35,3 +35,13 @@ lastModified         | `Freya<DateTime>`                      | Fill In | Fill I
 mediaTypesSupported  | `Freya<MediaType list>`                | Fill In | Fill In
 methodsKnown         | `Freya<Method list>`                   | Fill In | Fill In
 methodsSupported     | `Freya<Method list>`                   | Fill In | Fill In
+
+## Decisions
+
+Decision operations are of type `Freya<bool>` (aliased as `FreyaMachineDecision` in the Freya.Machine codebase). Default values returned are given.
+
+Operation          | Default | Description
+-------------------|---------|------------
+allowed            | `true`  | Fill In
+allowPostToGone    | `true`  | Fill In
+allowPostToMissing | `true`  | Fill In
