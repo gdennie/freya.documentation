@@ -8,19 +8,30 @@ Other functions return a value specific to that operation, and are detailed in t
 
 ## Actions
 
-All actions are of type `Freya<unit>` (aliased as `FreyaMachineAction` in the Freya.Machine codebase). By default all actions will be a simple no-op (a safe default).
+All action operations are of type `Freya<unit>` (aliased as `FreyaMachineAction` in the Freya.Machine codebase). By default all actions will be a simple no-op (a safe default).
 
-Action   | Description
----------|------------
-doDelete | Fill In
-doPatch  | Fill In
-doPost   | Fill In
-doPut    | Fill In
+Operation | Description
+----------|------------
+doDelete  | Fill In
+doPatch   | Fill In
+doPost    | Fill In
+doPut     | Fill In
 
-## Configurations
+## Configuration
 
-Configurations vary by required return type, so the types are given in the table. They are all of Freya<T>, where T is oconfiguration item specific.
+Configuration operation types vary by required return type, so the types are given in the table. They are all of Freya<T>, where T is configuration operation specific.
 
-Configuration     | Type                  | Description
-------------------|-----------------------|------------
-charsetsSupported | `Freya<Charset list>` | Fill In
+Operation            | Type                                   | Default | Description
+---------------------|----------------------------------------|---------|------------
+charsetsSupported    | `Freya<Charset list>`                  | Fill In | Fill In
+corsHeadersExposed   | `Freya<string list>`                   | Fill In | Fill In
+corsHeadersSupported | `Freya<string list>`                   | Fill In | Fill In
+corsMethodsSupported | `Freya<Method list>`                   | Fill In | Fill In
+corsOriginsSupported | `Freya<AccessControlAllowOriginRange>` | Fill In | Fill In
+encodingsSupported   | `Freya<ContentCoding list>`            | Fill In | Fill In
+eTag                 | `Freya<EntityTag>`                     | Fill In | Fill In
+languagesSupported   | `Freya<LanguageTag list>`              | Fill In | Fill In
+lastModified         | `Freya<DateTime>`                      | Fill In | Fill In
+mediaTypesSupported  | `Freya<MediaType list>`                | Fill In | Fill In
+methodsKnown         | `Freya<Method list>`                   | Fill In | Fill In
+methodsSupported     | `Freya<Method list>`                   | Fill In | Fill In
