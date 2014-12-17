@@ -6,7 +6,7 @@ The following table gives a complete reference to all *user configurable* operat
 
 * `FreyaMachineAction` -- a `Freya<unit>` function, simply an action with no return value.
 * `FreyaMachineDecision` -- a `Freya<bool>` function, simply a "true/false" or "yes/no" function.
-* `FreyaMachineHandler` -- a `FreyaMachineNegotiation -> Freya<FreyaMachineRepresentation` function - slightly more complicated, it's the final function called in a response, and is where you supply data (and some surrounding metadata) to be returned to the client. This is explained in more detail in the guide to [Freya Content Negotiation][conneg].
+* `FreyaMachineHandler` -- a `FreyaMachineNegotiation -> Freya<FreyaMachineRepresentation` function - this is explained in more detail in the guide to [Freya Content Negotiation][conneg].
 
 None of the operations are _"required"_, so all have defaults which will be used if not specified. These are also given in the table.
 
