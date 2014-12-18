@@ -1,6 +1,6 @@
 # Freya.Machine Reference
 
-Freya.Machine uses a computation expression syntax to let you define resources in a declarative, type-safe way. It uses custom operations to try and provide a clean and tidy syntax for doing this, but this does mean that you need to know what those operations are called, and what their specificaton is!
+Freya.Machine uses a computation expression syntax to let you define resources in a declarative, type-safe way (for a full _guide_ to defining resources using Freya.Machine, see [Defining Resources with Machine][resources]). It uses custom operations to try and provide a clean and tidy syntax for doing this, but this does mean that you need to know what those operations are called, and how to use them. A full reference to all of those custom operations is provided by this document, with links to more detail on specific areas when helpful. This reference is also best read in combination with the guide on [Understanding the Machine Execution Model][graph].
 
 The following sections give a complete reference to all *user configurable* operations for a Freya.Machine resource. None of the operations are _"required"_, so all have defaults which will be used if not specified. These are also given in the tables where relevant, otherwise they are specified in the section description.
 
@@ -72,7 +72,7 @@ uriTooLong              | `false` | Fill In
 
 ## Handlers
 
-Handler operations are of type `FreyaMachineNegotiation -> Freya<FreyaMachineRepresenyation>`. See the [guide to Handlers and Content Negotiation][handlers-conneg] for a full explanation of how to implement handlers. By default the handlers will return an empty response.
+Handler operations are of type `FreyaMachineNegotiation -> Freya<FreyaMachineRepresenyation>`. See the guide to [Handlers and Content Negotiation in Machine][handlers] for a full explanation of how to implement handlers. By default the handlers will return an empty response.
 
 Operation                     | Description
 ------------------------------|------------
@@ -102,3 +102,7 @@ handleUnknownMethod           | Fill In
 handleUnprocessableEntity     | Fill In
 handleUnsupportedMediaType    | Fill In
 handleUriTooLong              | Fill In
+
+[resources]: http://example.com
+[graph]: http://example.com
+[handlers]: http://example.com
