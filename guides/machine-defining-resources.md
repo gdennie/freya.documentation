@@ -1,0 +1,1 @@
+# Defining Resources with Machine

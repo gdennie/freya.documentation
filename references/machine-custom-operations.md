@@ -103,6 +103,6 @@ handleUnprocessableEntity     | Fill In
 handleUnsupportedMediaType    | Fill In
 handleUriTooLong              | Fill In
 
-[resources]: http://example.com
-[graph]: http://example.com
-[handlers]: http://example.com
+[resources]: ../guides/machine-defining-resources.md
+[graph]: ../guides/machine-understanding-the-execution-model.md
+[handlers]: ../guides/machine-handlers-and-content-negotiation.md
