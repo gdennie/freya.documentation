@@ -12,31 +12,29 @@ To make full use of the Freya stack it's useful to understand how the stack fits
 
 ### Freya.Core
 
-__Freya.Core__ is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by __Freya.Core__ is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
+_Freya.Core_ is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by _Freya.Core_ is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
 
 This computation expression (simply called `freya`) comes with a set of operators and functions for working with the data inside the OWIN state, and some useful functions for working in a request/response-centric way, such as memoising computation expressions for the lifetime of a request.
 
-For more on __Freya.Core__ see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
+For more on _Freya.Core_ see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
 
 ### Freya.Types.*
 
-The __Freya.Types.*__ family of libraries (__Freya.Types.Cors__, __Freya.Types.Http__, __Freya.Types.Language__, __Freya.Types.Uri__) provides strongly typed representations of common data types that are used in web programming. The representations closely mirror the relevant specifications (such as the IETF RFCs which define much of the modern web infrastructure).
+The _Freya.Types.*_ family of libraries (_Freya.Types.Cors_, _Freya.Types.Http_, _Freya.Types.Language_, _Freya.Types.Uri_) provides strongly typed representations of common data types that are used in web programming. The representations closely mirror the relevant specifications (such as the IETF RFCs which define much of the modern web infrastructure).
 
 The types additionally comes with parsers and formatters, allowing them to easily be used where string representations of data are provided by lower level abstractions such as OWIN.
 
-The __Freya.Types.Cors__ and __Freya.Types.Http__ libraries also provide sets of lenses which integrate with the Freya.Core abstraction, providing strongly typed, safe access to all of the data within the OWIN state.
+The _Freya.Types.Cors_ and _Freya.Types.Http_ libraries also provide sets of lenses which integrate with the Freya.Core abstraction, providing strongly typed, safe access to all of the data within the OWIN state.
 
-For more on __Freya.Types.*__ see the in-depth guide to the [Types Family][types-family].
+For more on _Freya.Types.*_ see the in-depth guide to the [Types Family][types-family].
 
 ## Mid-Level Libraries
 
 ### Freya.Pipeline
 
-__Freya.Pipeline__ addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and a way of chaining these pipeline components together logically.
+_Freya.Pipeline_ addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and a way of chaining these pipeline components together logically.
 
-For more on __Freya.Pipeline__ see the in-depth guide to the [Pipeline][pipeline].
-
-
+For more on _Freya.Pipeline_ see the in-depth guide to the [Pipeline][pipeline].
 
 [OWIN]: http://owin.org
 
