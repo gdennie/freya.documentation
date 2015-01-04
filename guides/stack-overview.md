@@ -12,29 +12,29 @@ To make full use of the Freya stack it's useful to understand how the stack fits
 
 ### Freya.Core
 
-*Freya.Core* is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by Freya.Core is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
+__Freya.Core__ is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by __Freya.Core__ is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
 
 This computation expression (simply called `freya`) comes with a set of operators and functions for working with the data inside the OWIN state, and some useful functions for working in a request/response-centric way, such as memoising computation expressions for the lifetime of a request.
 
-For more on Freya.Core see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
+For more on __Freya.Core__ see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
 
 ### Freya.Types.*
 
-The Freya.Types.* family of libraries (Freya.Types.Cors, Freya.Types.Http, Freya.Types.Language, Freya.Types.Uri) provides strongly typed representations of common data types that are used in web programming. The representations closely mirror the relevant specifications (such as the IETF RFCs which define much of the modern web infrastructure).
+The __Freya.Types.*__ family of libraries (__Freya.Types.Cors__, __Freya.Types.Http__, __Freya.Types.Language__, __Freya.Types.Uri__) provides strongly typed representations of common data types that are used in web programming. The representations closely mirror the relevant specifications (such as the IETF RFCs which define much of the modern web infrastructure).
 
 The types additionally comes with parsers and formatters, allowing them to easily be used where string representations of data are provided by lower level abstractions such as OWIN.
 
-The Freya.Types.Cors and Freya.Types.Http libraries also provide sets of lenses which integrate with the Freya.Core abstraction, providing strongly typed, safe access to all of the data within the OWIN state.
+The __Freya.Types.Cors__ and __Freya.Types.Http__ libraries also provide sets of lenses which integrate with the Freya.Core abstraction, providing strongly typed, safe access to all of the data within the OWIN state.
 
-For more on Freya.Types.* see the in-depth guide to the [Types Family][types-family].
+For more on __Freya.Types.*__ see the in-depth guide to the [Types Family][types-family].
 
 ## Mid-Level Libraries
 
 ### Freya.Pipeline
 
-Freya.Pipeline addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and way of chaining these pipeline components together logically.
+__Freya.Pipeline__ addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and a way of chaining these pipeline components together logically.
 
-For more on Freya.Pipeline see the in-depth guide to the [Pipeline][pipeline].
+For more on __Freya.Pipeline__ see the in-depth guide to the [Pipeline][pipeline].
 
 
 
