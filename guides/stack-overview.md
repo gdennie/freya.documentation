@@ -12,11 +12,11 @@ To make full use of the Freya stack it's useful to understand how the stack fits
 
 ### Freya.Core
 
-Freya.Core is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by Freya.Core is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
+*Freya.Core* is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by Freya.Core is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
 
 This computation expression (simply called `freya`) comes with a set of operators and functions for working with the data inside the OWIN state, and some useful functions for working in a request/response-centric way, such as memoising computation expressions for the lifetime of a request.
 
-For more on Freya.Core see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-asbtraction] and [Core Syntax Options][core-syntax].
+For more on Freya.Core see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
 
 ### Freya.Types.*
 
@@ -34,7 +34,7 @@ For more on Freya.Types.* see the in-depth guide to the [Types Family][types-fam
 
 Freya.Pipeline addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and way of chaining these pipeline components together logically.
 
-For more on Freya.Pipeline see the in-depth guide to the [Freya Pipeline][pipeline].
+For more on Freya.Pipeline see the in-depth guide to the [Pipeline][pipeline].
 
 
 
