@@ -30,8 +30,10 @@ corsMethodsSupported | `Freya<Method list>`                   | Fill In | Fill I
 corsOriginsSupported | `Freya<AccessControlAllowOriginRange>` | Fill In | Fill In
 encodingsSupported   | `Freya<ContentCoding list>`            | Fill In | Fill In
 eTag                 | `Freya<EntityTag>`                     | Fill In | Fill In
+expires              | `Freya<DateTime>`                      | Fill In | Fill In
 languagesSupported   | `Freya<LanguageTag list>`              | Fill In | Fill In
 lastModified         | `Freya<DateTime>`                      | Fill In | Fill In
+location             | `Freya<UriReference>`                  | Fill In | Fill In
 mediaTypesSupported  | `Freya<MediaType list>`                | Fill In | Fill In
 methodsKnown         | `Freya<Method list>`                   | Fill In | Fill In
 methodsSupported     | `Freya<Method list>`                   | Fill In | Fill In
