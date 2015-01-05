@@ -8,15 +8,15 @@ You can take only the low level libraries and use them to build your own systems
 
 To make full use of the Freya stack it's useful to understand how the stack fits together and what is provided by the different libraries. That way you can decide what you want to build and what level of abstraction suits you.
 
-## Low Level Libraries
+## Low-Level Libraries
 
 ### Freya.Core
 
-_Freya.Core_ is one of the lowest level libraries in the Freya stack. Along with Freya.Types, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by _Freya.Core_ is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
+_Freya.Core_ is one of the lowest level libraries in the Freya stack. Along with _Freya.Types_, it's one of two libraries which have no dependencies within the Freya stack, and it serves as a basic functional abstraction over [OWIN][owin]. The chief functionality provided by _Freya.Core_ is fully-featured computation expression for working with OWIN compatible web requests/reposnses, wrapping the raw dictionary abstraction of OWIN with a more idiomatically F# interface to that data.
 
 This computation expression (simply called `freya`) comes with a set of operators and functions for working with the data inside the OWIN state, and some useful functions for working in a request/response-centric way, such as memoising computation expressions for the lifetime of a request.
 
-For more on _Freya.Core_ see the in-depth guides on the [Core Overview][core-overview], [Core Abstraction][core-abstraction] and [Core Syntax Options][core-syntax].
+For more on _Freya.Core_ see the guides [Core Overview][core-overview] and [Core Syntax Options][core-syntax] (though [Core Syntax Options][core-syntax] can be safely deferred until you're comfortable with the Freya stack).
 
 ### Freya.Types.*
 
@@ -26,20 +26,25 @@ The types additionally comes with parsers and formatters, allowing them to easil
 
 The _Freya.Types.Cors_ and _Freya.Types.Http_ libraries also provide sets of lenses which integrate with the Freya.Core abstraction, providing strongly typed, safe access to all of the data within the OWIN state.
 
-For more on _Freya.Types.*_ see the in-depth guide to the [Types Family][types-family].
+For more on _Freya.Types.*_ see the guide [Types Family][types-family].
 
 ## Mid-Level Libraries
 
 ### Freya.Pipeline
 
-_Freya.Pipeline_ addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and a way of chaining these pipeline components together logically.
+_Freya.Pipeline_ addresses the desire for composability in the Freya stack. It provides a simple set of types which define a Freya pipeline -- simply put, a core Freya abstraction which returns either Next or Halt, and a way of chaining these pipeline components together in a logical form.
 
-For more on _Freya.Pipeline_ see the in-depth guide to the [Pipeline][pipeline].
+For more on _Freya.Pipeline_ see the guide [Pipeline][pipeline].
+
+## High-Level Libraries
+
+### Freya.Machine
+
+### Freya.Router
 
 [OWIN]: http://owin.org
 
 [core-overview]: ./core-overview.md
-[core-abstraction]: ./core-understanding-the-abstraction.md
 [core-syntax]: ./core-computation-expressions-or-operators.md
 
 [types-family]: ./types-understanding-the-family.md
